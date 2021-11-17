@@ -12,13 +12,17 @@ const breed = process.argv[2];
  * ====================================================================================
  */
 
+const breedLog = (breed, catJson) => {
+  if (!catJson[0]) { // breed not found returns a =n empty array from the cat api
+    console.log(`${breed} not found`);
+  } else {
+    console.log(`${catJson[0].description}`);
+  }
+}
+
 request(`https://api.thecatapi.com/v1/breeds/search?q=${breed}`, (error, response, body) => {
   if (error) console.log(`Error code: ${error}`);
   console.log(`status code: ${response.statusCode}`);
   const breedJson = JSON.parse(body);
-  if (body === '[]') { // breed not found returns a =n empty array from the cat api
-    console.log(`${breed} not found`);
-  } else {
-    console.log(`${breedJson[0].description}`);
-  }
+  breedLog(breed, breedJson)
 });
