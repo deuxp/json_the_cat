@@ -20,9 +20,34 @@ const breedLog = (breed, catJson) => {
   }
 }
 
-request(`https://api.thecatapi.com/v1/breeds/search?q=${breed}`, (error, response, body) => {
-  if (error) console.log(`Error code: ${error}`);
-  console.log(`status code: ${response.statusCode}`);
-  const breedJson = JSON.parse(body);
-  breedLog(breed, breedJson)
+request(`https://api.thecatapi.com/v1/breeds/search?q=${breed}`, (error, response, body) => { // this used to be outside of a function
+if (error) console.log(`Error code: ${error}`);
+console.log(`status code: ${response.statusCode}`);
+const breedJson = JSON.parse(body);
+breedLog(breed, breedJson)
 });
+
+
+
+
+
+
+
+
+const fetchBreedDescription = (breedname, callback) => { // <-- do I just pass in breedLog to this on the index page ?
+  
+  
+}
+// const a = fetchBreedDescription(breed, (error, ) => {
+
+// })
+
+
+/* 
+To test this file we need to have it ina  function
+to refactor this file to be an async function that we can call
+1. move the request logic onto a function:
+2. import it into an index.js file.. any separate file
+    this file is where the user can provide the breed name to.
+3. set up mocha and chai
+*/
