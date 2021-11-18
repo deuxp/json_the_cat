@@ -1,0 +1,25 @@
+{
+  "name": "json_the_cat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deuxp/json_the_cat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deuxp/json_the_cat/issues"
+  },
+  "homepage": "https://github.com/deuxp/json_the_cat#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "request": "^2.88.2"
+  }
+}
