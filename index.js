@@ -8,7 +8,7 @@ const breed = process.argv[2];
  * Behaviour  ->  1. connect to the cat api using request --> looks for the resource api path --> recieves json of the breed query
  *                2. parses the json from the cat api
  *                3. logs the breed description to the terminal
- *                4. logs if the breed is not found 
+ *                4. logs if the breed is not found
  * ====================================================================================
  */
 
@@ -18,7 +18,7 @@ const breedLog = (error, description) => {
   } else {
     console.log(description);
   }
-}
+};
 
 
 fetchBreedDescription(breed, breedLog);
